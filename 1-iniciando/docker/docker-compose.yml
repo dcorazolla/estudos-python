@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+            
+    python:
+        container_name: python
+        image: python:alpine
+        ports:
+            - "8080:80"
+#        #volumes:
+#            - "../source/:/var/www/html/"
+#            - "../../cache-composer/:/root/.composer/"
+        networks:
+            - python
+       
+networks:
+    python:
+        driver: bridge
